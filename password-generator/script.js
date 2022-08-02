@@ -14,6 +14,23 @@ const randomFunc = {
   symbol: getRandomSymbol,
 };
 
+clipboardEl.addEventListener('click', async () => {
+  const copiedPassword = resultEl.innerText;
+
+  try {
+    await navigator.clipboard.writeText(copiedPassword);
+
+    if (!copiedPassword) {
+      alert('Password empty');
+      return;
+    }
+
+    alert('Password copied to clipboard');
+  } catch (error) {
+    console.error(error);
+  }
+});
+
 generateEl.addEventListener('click', () => {
   const length = +lengthEl.value;
   const hasLower = lowercaseEl.checked;
