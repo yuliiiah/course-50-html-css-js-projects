@@ -53,7 +53,7 @@ h4 {
 }
 
 .nums span.out {
-  animation: goIn 0.5s ease-in-out;
+  animation: goOut 0.5s ease-in-out;
 }
 
 .final {
@@ -65,13 +65,15 @@ h4 {
 }
 
 .final button {
+  background-color: #3498db;
+  color: #fff;
   font: inherit;
   font-size: 20px;
   text-transform: uppercase;
   border: none;
   border-radius: 5px;
   padding: 10px 15px;
-  margin: 0;
+  margin-top: 10px;
   cursor: pointer;
 }
 
